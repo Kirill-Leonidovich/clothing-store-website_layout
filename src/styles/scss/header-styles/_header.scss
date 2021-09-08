@@ -1,0 +1,193 @@
+/* header ////////////////////////////////////////////////////////////////////////////////////// */
+.header-top__body{
+    padding: 25px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-logo {
+    cursor: default;
+}
+.header-logo__text{
+    font-size: 49px;
+    line-height: 19px;
+    color: #3cc3b5;
+    font-family: 'Crimson Text', serif;
+    user-select: none;
+}
+.header-search {
+    position: relative;
+    padding: 0px 20px;
+    width: 475px;
+}
+.header-search__input {
+    padding: 6px 50px 6px 10px; 
+    width: 100%;
+    border: 2px solid #e1e1e1;
+    &:focus{
+        border: 2px solid #a1a1a1;   
+    }
+}
+.header-search__button_submit {
+    background-color: rgba(255, 0, 0, 0);
+    right: 30px;
+    top: 50%;
+    margin-top: -11.5px;
+    position: absolute;
+    .header-serch__magnifier{
+        display: block;
+        width: 23px;
+        height: 23px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 19px;
+            height: 19px;
+            border: 3px solid #e5e5e5;
+            border-radius: 100%;
+            left: 0;
+            right: 0;
+            transition: all 0.3s;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 8px;
+            background-color: #e5e5e5;
+            transform: rotate(-45deg);
+            border-radius: 0% 0% 30% 30%;
+            left: 17px;
+            top: 15px;
+            transition: all 0.3s;
+        }
+    }
+    &:active{
+        .header-serch__magnifier{
+            &::before{
+                background-color: #3cc3b5;
+            }
+            &::after{
+                border: 3px solid #3cc3b5;
+            }
+        }
+    }
+    @media (min-width:767px) {
+        &:hover{
+            .header-serch__magnifier{
+                &::before{
+                    background-color: #3cc3b5;
+                }
+                &::after{
+                    border: 3px solid #3cc3b5;
+                }
+            }
+        }
+    }
+}
+.header-basket {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    &:active{
+        .header-basket__img{
+            svg{
+                fill: #14cc8f;
+            }
+        }
+        .header-basket-price__text {
+            color: #14cc8f;
+        }
+    }
+    @media (min-width:767px) {
+        &:hover{
+            .header-basket__img{
+                margin-left: 10px;
+                margin-right: 5px;
+                svg{
+                    fill: #14cc8f;
+                }
+            }
+            .header-basket-price__text {
+                color: #14cc8f;
+            }
+        }
+    }
+}
+.header-basket__img {
+    transition: all 0.3s;
+    svg{
+        fill: rgb(60, 195, 181);
+        transition: all 0.3s;
+    }
+}
+.header-basket-price__text {
+    font-size: 33px;
+    line-height: 19px;
+    color: #a1a1a1;
+    transition: all 0.3s;
+    margin-left: 15px;
+
+}
+.header-nav {
+    background-color: #3cc3b5;
+}
+.header-nav__body {
+    padding: 10px 0px;
+}
+.header-nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li{
+        @media (min-width:991px) {
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                background-color: #fff;
+                top: 1px;
+                right: -21.5px;
+            }
+            &:last-child{
+                &::after{
+                    content: none;
+                }
+            }
+        }
+    }
+}
+.header-nav__link {
+    padding: 5px;
+    font-size: 21px;
+    line-height: 19px;
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    &:active{
+        color: #232927;
+    }
+    @media (min-width:767px) {
+        &:hover{
+            color: #a1a1a1;
+            background-color: #fff;
+        }
+    }
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width:767px) {
+    .header-basket-price{
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .header-logo__text{
+        font-size: 30px;
+    }
+}
+/* header ////////////////////////////////////////////////////////////////////////////////////// */

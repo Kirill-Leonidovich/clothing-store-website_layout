@@ -1,0 +1,55 @@
+@import '../../fonts/fonts';
+@import '../other-styles/burger';
+@import '../other-styles/normalize';
+@import '../other-styles/zeroing';
+@import 'header-styles/header';
+@import 'banner-styles/banner';
+@import 'slider-styles/slider';
+@import 'products-styles/products';
+@import 'footer-styles/footer';
+
+
+/* main //////////////////////////////////////////////////////////////////////////////////////// */
+.canteiner {
+    padding: 0px 15px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.heading {
+    font-size: 27px;
+    font-weight: 700;
+    color: #afafaf;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    cursor: default;
+}
+.button_green {
+    font-size: 19px;
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    background-color: #3cc395;
+    border-radius: 7px;
+    transition: all 0.3s;
+    &:active{
+        background-color: #fff;
+        color: #3cc3b5;
+    }
+    @media (min-width:767px) {
+        &:hover{
+            background-color: #bb3541;
+        }
+    }
+}
+.site-description {
+    background-color: #2da89b;
+    text-align: center;
+}
+.site-description__text {
+    padding: 15px 0px;
+    font-size: 15px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+/* main //////////////////////////////////////////////////////////////////////////////////////// */

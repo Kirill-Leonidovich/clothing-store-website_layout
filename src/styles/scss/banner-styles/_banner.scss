@@ -1,0 +1,106 @@
+/* banner ////////////////////////////////////////////////////////////////////////////////////// */
+.banner {
+  position: relative;
+  overflow: hidden;
+  // background: url(../../img/main-background-img.png) top no-repeat;
+  // background-size: 100% auto;
+  // box-shadow: inset 0 0.5px 3px 2px #18857a2d;
+}
+.banner__background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+.banner__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 65px 75px 50px 75px;
+}
+.banner__content {
+  margin-left: 95px;
+  @media (min-width: 991px) {
+    padding: 0px 90px 0px 0px;
+  }
+}
+.banner-title {
+  cursor: default;
+}
+.banner-title__text {
+  font-size: 61px;
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+.banner-descr {
+  cursor: default;
+}
+.banner-descr__text {
+  font-size: 16px;
+  line-height: 28px;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 30px;
+}
+.banner__button {
+  font-size: 27px;
+  line-height: 19px;
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  background-color: rgba(255, 0, 0, 0);
+  border: 3px solid #fff;
+  border-radius: 7px;
+  transition: all 0.3s;
+  &:active {
+    background-color: #fff;
+    color: #3cc3b5;
+  }
+  @media (min-width: 767px) {
+    &:hover {
+      background-color: #fff;
+      color: #bb3541;
+      border: 3px solid #bb3541;
+    }
+  }
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 767px) {
+  .banner__body {
+    padding: 15px 10px 15px 10px;
+  }
+  .banner__img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .banner__content {
+    margin-left: 25px;
+  }
+  .banner-title__text {
+    font-size: 41px;
+  }
+  .banner-descr__text {
+    font-size: 11px;
+  }
+}
+@media (max-width: 480px) {
+  .banner__img {
+    display: none;
+  }
+}
+/* banner ////////////////////////////////////////////////////////////////////////////////////// */

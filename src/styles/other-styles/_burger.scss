@@ -1,0 +1,102 @@
+@media print {}
+
+@media(orientation:landscape) {}
+
+@media (max-width: 320px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width:767px) {}
+
+@media (min-width:767px) {}
+
+@media (max-width:991px) {}
+
+@media (min-width:991px) {}
+
+@media (max-width:1199px) {}
+
+@media (min-width:1199px) {}
+
+
+/* burger /////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media (max-width:767px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .header-nav__list{
+        flex-direction: column;
+        padding: 80px 0px 0px 0px;
+        li{
+            margin: 5px;
+        }
+    }
+    .header-nav__menu {
+        position: relative;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.623);
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+        z-index: 2;
+    }
+    .header-nav__menu.active {
+        left: 0;
+    }
+    .header__burger {
+        display: block;
+        left: 20px;
+        top: -10px;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+    .header__burger span {
+        background-color: #3cbeb9;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        top: 50%;
+        margin-top: -1.5px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger::after,
+    .header__burger::before {
+        content: '';
+        background-color: #3cbeb9;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger::after {
+        bottom: 0;
+    }
+    .header__burger::before {
+        top: 0;
+    }
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 50%;
+        margin-top: -1.5px;
+    }
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 50%;
+        margin-bottom: -1.5px;
+    }
+    .header__burger.active span {
+        transform: scale(0);
+    }
+}
+
+
+/* burger /////////////////////////////////////////////////////////////////////////////////////// */

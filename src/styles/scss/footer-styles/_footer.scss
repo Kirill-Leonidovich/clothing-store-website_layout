@@ -1,0 +1,45 @@
+/* footer ////////////////////////////////////////////////////////////////////////////////////// */
+
+.footer {
+    background-color: #3cc3b5;
+}
+.footer__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-section {
+    padding: 40px 20px;
+    @media (min-width:767px) {
+        width: 25%;
+    }
+}
+.footer-section-title__text {
+    font-size: 27px;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-section-list {
+    li{
+        padding: 8px 0px;
+    }
+}
+.footer-section__link {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    color: #fff;
+    &:active{
+        color: #000;
+    }
+    @media (min-width:767px) {
+        &:hover{
+            color: #000;
+        }
+    }
+}
+/* footer ////////////////////////////////////////////////////////////////////////////////////// */
