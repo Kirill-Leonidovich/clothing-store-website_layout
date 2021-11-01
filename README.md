@@ -1,2 +1,1 @@
-﻿# clothing-store-website
-### layout
+﻿# clothing-store
