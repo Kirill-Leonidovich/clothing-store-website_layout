@@ -63,8 +63,10 @@
     margin-bottom: 20px;
 }
 img{
-    height: 100%;
-    width: auto;
+    object-fit: contain;
+    object-position: center;
+    max-height: 100%;
+    max-width: 100%;
 }
 .item-heading__text {
     margin-bottom: 20px;
